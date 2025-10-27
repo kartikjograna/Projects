@@ -1,0 +1,89 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    background-color: #e2ffe6;
+}
+
+h1 {
+    margin: 30px;
+}
+
+.game {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+    gap: 5px;
+    justify-content: center;
+}
+
+.cell {
+    background-color: white;
+    display: flex;
+    border: 2px solid #333;
+    transition: background-color 0.2s;
+    cursor: pointer;
+    font-size: 2.5rem;
+    font-weight: bold;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.2s;
+}
+
+.cell:hover {
+    background-color: #e0e0e0;
+}
+
+.cell:active {
+    transform: scale(96%);
+}
+
+[data-index = "0"] {
+    border-radius: 20px 0px 0px 0px;
+}
+
+[data-index = "2"] {
+    border-radius: 0px 20px 0px 0px;
+}
+
+[data-index = "6"] {
+    border-radius: 0px 0px 0px 20px;
+}
+
+[data-index = "8"] {
+    border-radius: 0px 0px 20px 0px;
+}
+
+.reset {
+    margin: 20px 0px;
+    padding: 10px 20px;
+    border-style: none;
+    width: auto;
+    height: auto;
+    font-size: 2rem;
+    border-radius: 25px;
+    cursor: pointer;
+    background-color: rgb(129, 255, 129);
+    transition: background-color 0.2s, transform 0.2s, box- 0.2s;
+    box-shadow: 0 10px #9cd4a2;
+}
+
+.reset:hover {
+    background-color: rgb(89, 198, 89);
+}
+
+.reset:active {
+    background-color: rgb(119, 203, 119);
+    box-shadow: 0 4px #729a76;
+    transform: translateY(6px);
+}
+
+.status {
+    margin-top: 20px;
+    font-size: 2rem;
+    font-weight: bold;
+}
